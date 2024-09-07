@@ -78,8 +78,8 @@ function {
 		x      '^[[101;6u'  x          end-of-line          # Shift + Ctrl + E
 		x      '^[[1;6D'    '^[[1;4D'  backward-word        # Shift + Ctrl/Option + LeftArrow
 		x      '^[[1;6C'    '^[[1;4C'  forward-word         # Shift + Ctrl/Option + RightArrow
-		x      '^[[1;6H'    '^[[1;4H'  beginning-of-buffer  # Shift + Ctrl/Option + Home
-		x      '^[[1;6F'    '^[[1;4F'  end-of-buffer        # Shift + Ctrl/Option + End
+		x      '^[[1;6H'    '^[[1;10D' beginning-of-buffer  # Shift + Command + LeftArrow
+		x      '^[[1;6F'    '^[[1;10C' end-of-buffer        # Shift + Command + RightArrow
 	); do
 		# Use alternative sequence (Option instead of Ctrl) on macOS, if defined.
 		[[ "$OSTYPE" = darwin* && "$seq_mac" != x ]] && seq=$seq_mac
